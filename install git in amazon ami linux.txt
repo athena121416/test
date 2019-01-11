@@ -1,0 +1,13 @@
+sudo yum update
+sudo yum install curl-devel expat-devel gettext-devel 
+sudo yum install openssl-devel perl-devel zlib-devel
+sudo yum install asciidoc xmlto docbook2X
+sudo yum install gcc autoconf
+sudo ln -s /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi
+wget https://github.com/git/git/archive/v2.8.4.zip
+sudo unzip v2.8.4.zip
+cd git-2.8.4
+sudo make configure
+sudo ./configure --prefix=/usr
+sudo make all doc info
+sudo make install install-doc install-html install-info
